@@ -96,7 +96,7 @@ int main()
     -0.5f, -0.5f
   };
 
-  GLuint buffer;
+  unsigned int buffer;
   glGenBuffers(1, &buffer);
   glBindBuffer(GL_ARRAY_BUFFER, buffer);
   glBufferData(GL_ARRAY_BUFFER, 6 * 2 * sizeof(float), positions, GL_STATIC_DRAW);
@@ -116,7 +116,7 @@ int main()
     /* Render here */
     glClear(GL_COLOR_BUFFER_BIT);
 
-    /* Create a triangle */
+    /* Create two triangle */
     glDrawArrays(GL_TRIANGLES, 0, 6);
 
     /* Swap front and back buffers */
